@@ -1,10 +1,10 @@
 # Carrossel: 5 sinais de que você ainda concilia Pix na mão
 
-- Status: **rascunho, aguardando aprovação do Hélio**
+- Status: **aprovado pelo Hélio em 2026-10-27; agendado no Metricool para quarta, 28/10, 10h (Fortaleza)**. Artes em `midia/2026-10-27_carrossel-pix-conciliacao/`.
 - Pilar: Ensina (post educativo) | Público: PMEs que recebem por Pix | Formato: carrossel 8 telas, 1080×1350
 - Gatilhos: lacuna de informação e loop aberto (o quinto sinal "passa batido"), aversão à perda (o que o caixa perde ao depender de conferência manual), especificidade (cenário real do dono de PME), pico-fim (tela 7 é o sinal mais forte; a 8 é o checklist que vale o salvamento)
 - CTA único: link na bio
-- Horário sugerido: quarta, 28/10, 10h (Fortaleza). Melhor faixa nos dados do Metricool para Instagram na semana; reavaliar quando o perfil tiver histórico próprio.
+- Horário: quarta, 28/10, 10h (Fortaleza). Escolha: primeiro dia útil disponível dentro da melhor faixa do Metricool para Instagram (quarta a sexta, 10h) e dentro da janela de 10h–12h indicada para público B2B; ~70% das views acontecem nos 3 primeiros dias, então sair no meio da semana dá 3 dias úteis de distribuição. Reavaliar com o histórico próprio da conta (4–6 semanas).
 - Fonte do dado da tela 2: Banco Central, Relatório de Gestão do Pix 2023-2025, citado em https://crcma.org.br/noticias/pix-evolui-e-cobranca-automatica-fica-simples-e-segura-para-empresas-e-clientes
 
 ## Telas
@@ -28,7 +28,9 @@ Nos slides eu mostro os cinco sinais de que a conciliação do Pix ainda está n
 
 Quando o sistema se integra à API do Pix, a cobrança nasce identificada e cada pagamento fica registrado. Dá pra auditar.
 
-Salva pra consultar depois. Quer ver como eu monto isso? Link na bio.
+Salva pra consultar depois e manda pra quem ainda confere o Pix no extrato.
+
+Quer ver como eu monto isso? Link na bio.
 
 Fonte: Banco Central, Relatório de Gestão do Pix 2023-2025.
 
