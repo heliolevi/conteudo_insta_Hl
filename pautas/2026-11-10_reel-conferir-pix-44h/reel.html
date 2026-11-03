@@ -113,11 +113,11 @@ html,body{width:1080px;height:1920px;overflow:hidden}
    <h2 class="t1" style="font-size:92px">Faça a <span class="cy">conta</span>.</h2>
    <div class="panel r" style="margin-top:60px" id="pB">
      <div class="tag mono" style="display:flex;justify-content:space-between;margin-bottom:18px;font-size:26px"><span>Conferência do Pix</span><span class="i" style="text-transform:none;color:#7f98b6">// ilustrativo</span></div>
-     <div class="ln" data-s="3.55" data-raw="10 min por dia útil"></div>
-     <div class="ln" data-s="4.2" data-raw="× 22 dias úteis"></div>
-     <div class="ln" data-s="5.0" data-raw="= 220 min (3h40 por mês)"></div>
-     <div class="ln" data-s="5.85" data-raw="× 12 meses"></div>
-     <div class="ln" data-s="6.5" data-raw="= ^2.640 min = 44 h^"></div>
+     <div class="ln" data-s="4.15" data-raw="10 min por dia útil"></div>
+     <div class="ln" data-s="5.92" data-raw="× 22 dias úteis"></div>
+     <div class="ln" data-s="7.0" data-raw="= 220 min (3h40 por mês)"></div>
+     <div class="ln" data-s="7.85" data-raw="× 12 meses"></div>
+     <div class="ln" data-s="9.5" data-raw="= ^2.640 min = 44 h^"></div>
    </div>
    <div class="sub" id="subB" style="margin-top:44px;opacity:0">Troque pelos seus números.</div>
  </div></div>
@@ -137,12 +137,12 @@ html,body{width:1080px;height:1920px;overflow:hidden}
 
  <!-- D: solução -->
  <div class="sc" id="D"><div class="wrap" style="top:520px">
-   <h2 class="t1" style="font-size:70px">Com o Pix identificado por pedido, sobra só a <span class="cy">divergência</span>.</h2>
+   <h2 class="t1" style="font-size:70px">Com o Pix identificado, sobra só a <span class="cy">divergência</span>.</h2>
    <div class="panel r" style="margin-top:56px">
      <div class="tag mono" style="display:flex;justify-content:space-between;margin-bottom:18px;font-size:26px"><span>Conciliação do dia</span><span class="i" style="text-transform:none;color:#7f98b6">// ilustrativo</span></div>
-     <div class="ln" style="font-size:38px" data-s="11.55" data-raw="pedidos = pix recebidos     ok"></div>
-     <div class="ln" style="font-size:38px" data-s="12.0" data-raw="notas = pedidos pagos       ok"></div>
-     <div class="ln" style="font-size:38px" data-s="12.45" data-raw="^divergência: 1 (pedido 1049)^"></div>
+     <div class="ln" style="font-size:38px" data-s="14.0" data-raw="pedidos = pix recebidos     ok"></div>
+     <div class="ln" style="font-size:38px" data-s="14.6" data-raw="notas = pedidos pagos       ok"></div>
+     <div class="ln" style="font-size:38px" data-s="15.5" data-raw="^divergência: 1 (pedido 1049)^"></div>
    </div>
  </div></div>
 
@@ -171,19 +171,19 @@ function typed(raw,n){
 }
 const lines=[...document.querySelectorAll('.ln')];
 function seek(t){
-  // A: gancho (0 a 3) e retorno do loop (14,6 a 15)
-  const a1=cl((3.0-t)/.3), a2=cl((t-14.6)/.35);
+  // A: gancho (0 a 3) e retorno do loop (17,95 a 18,3). Tempos sincronizados com a voz (ElevenLabs).
+  const a1=cl((2.95-t)/.3), a2=cl((t-17.95)/.35);
   const A=$('A'); A.style.opacity=(t<3.1?a1:a2).toFixed(3);
   A.style.transform=`scale(${(1.06-0.06*cl(t/2.6)).toFixed(4)})`;
   $("n44").textContent=44;
   // B: a conta
-  win($('B'),t,2.9,7.9,.3,.3);
+  win($('B'),t,2.85,11.2,.3,.3);
   // C: virada
-  win($('C'),t,7.8,11.0,.3,.3);
-  $('b40').style.transform=`scaleX(${P(t,8.35,.7).toFixed(3)})`;
-  $('b44').style.transform=`scaleX(${P(t,8.9,.8).toFixed(3)})`;
+  win($('C'),t,11.1,13.5,.3,.3);
+  $('b40').style.transform=`scaleX(${P(t,11.55,.7).toFixed(3)})`;
+  $('b44').style.transform=`scaleX(${P(t,12.1,.8).toFixed(3)})`;
   // D: solução
-  win($('D'),t,10.9,14.7,.3,.3);
+  win($('D'),t,13.35,17.95,.3,.3);
   // linhas digitadas
   for(const el of lines){
     const s=parseFloat(el.dataset.s), k=Math.floor(Math.max(0,t-s)*42);
@@ -191,9 +191,9 @@ function seek(t){
     const active=t>=s && k<full;
     el.innerHTML=typed(raw,k)+(active?'<span class="cur"></span>':'');
   }
-  $('subB').style.opacity=P(t,7.05,.4).toFixed(3);
+  $('subB').style.opacity=P(t,10.2,.4).toFixed(3);
   // CTA
-  const p=$('pill'); const pi=P(t,12.9,.35), po=cl((14.7-t)/.3);
+  const p=$('pill'); const pi=P(t,16.45,.35), po=cl((17.95-t)/.3);
   p.style.opacity=(pi*po).toFixed(3); p.style.transform=`translateY(${((1-pi)*30).toFixed(1)}px)`;
 }
 document.fonts.ready.then(()=>seek(0));

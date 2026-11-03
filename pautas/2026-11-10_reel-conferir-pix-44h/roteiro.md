@@ -1,7 +1,7 @@
 # Reel: Conferir Pix na mão custa 44 horas por ano
 
 - Status: **rascunho, aguardando aprovação do Hélio** (nada agendado; vídeo e capa fora de `midia/`)
-- Pilar: Ensina / Prova | Público: PMEs que recebem por Pix | Formato: reel 9:16, 15 s, 1080×1920, 30 fps, sem áudio
+- Pilar: Ensina / Prova | Público: PMEs que recebem por Pix | Formato: reel 9:16, 18,3 s, 1080×1920, 30 fps, com locução (ElevenLabs, voz Carla) sincronizada
 - Por que agora: o relatório de 26/10 a 01/11 mostra que reel é o formato de maior alcance (461 e 199 contas) e que o gargalo é o gancho (só 22% e 28,3% das views passaram de 3 s, e o tempo médio foi 7,4 s e 9,7 s). Hipótese, 2 reels: número específico no quadro 1 segura mais que abertura de marca.
 - Gatilhos: número específico no quadro 1, "faça a conta" (o leitor troca pelos próprios números), virada em ~55% (44 h vence uma semana de 40 h), loop (o último quadro volta ao primeiro), pico-fim (a divergência)
 - Sinais do Instagram: tempo assistido (15 s, quadro 1 já com informação, duas viradas, legenda queimada, fim logo após a recompensa), envios por alcance ("manda pra quem fecha o caixa"), comentários (a pessoa responde quanto deu na conta dela)
@@ -12,22 +12,28 @@
 
 10 min por dia útil × 22 dias úteis = 220 min por mês (3h40) × 12 meses = 2.640 min = **44 h por ano**. 44 h ficam acima de uma semana de trabalho de 40 h. Os 10 min por dia são um exemplo ilustrativo, marcado como tal; o leitor troca pelos números dele. Não é dado de mercado, então não leva fonte.
 
-## Roteiro (texto na tela; não há fala)
+## Roteiro (texto na tela e locução, sincronizados com o áudio)
 
-| Tempo | Tela | Texto |
+Tempos medidos na locução entregue (18,2 s). O vídeo foi retemporizado para cada palavra cair junto da imagem.
+
+| Tempo | Locução | Tela |
 |---|---|---|
-| 0,0 a 3,0 s | Gancho: número grande já no quadro 1, zoom leve | CONFERIR PIX NA MÃO CUSTA · **44h** · por ano. |
-| 2,9 a 7,9 s | A conta, digitada linha a linha em bloco de log | Faça a **conta**. · 10 min por dia útil · × 22 dias úteis · = 220 min (3h40 por mês) · × 12 meses · = 2.640 min = 44 h · "Troque pelos seus números." |
-| 7,8 a 11,0 s | Virada: duas barras crescem (40 h e 44 h) | Mais que uma **semana** de trabalho. · Semana de trabalho 40 h · Conferindo Pix 44 h |
-| 10,9 a 14,7 s | Solução: bloco de conciliação | Com o Pix identificado por pedido, sobra só a **divergência**. · pedidos = pix recebidos ok · notas = pedidos pagos ok · divergência: 1 (pedido 1049) |
-| 12,9 a 14,7 s | CTA sobreposto | MANDA PRA QUEM FECHA O CAIXA · Link na bio. |
-| 14,6 a 15,0 s | Loop: volta ao quadro 1 (44h) | |
+| 0,0 a 2,9 s | "Quarenta e quatro horas por ano conferindo Pix." | Gancho: número grande já no quadro 1, zoom leve. CONFERIR PIX NA MÃO CUSTA · **44h** · por ano. |
+| 2,9 a 11,2 s | "Faça a conta." (2,9) | Faça a **conta**. Bloco de log digitado linha a linha |
+| | "Dez minutos por dia..." (4,2) | 10 min por dia útil |
+| | "vinte e dois dias úteis..." (5,9) | × 22 dias úteis, depois = 220 min (3h40 por mês) em 7,0 |
+| | "doze meses." (7,9) | × 12 meses |
+| | "Quarenta e quatro horas." (9,5) | = 2.640 min = 44 h (em ciano) · "Troque pelos seus números." |
+| 11,1 a 13,5 s | "Mais que uma semana de trabalho." (11,3) | Virada: barras de 40 h e 44 h crescem. Mais que uma **semana** de trabalho. |
+| 13,4 a 17,95 s | "Com o Pix identificado, sobra só a divergência." (13,5) | Com o Pix identificado, sobra só a **divergência**. Bloco de conciliação, divergência em 15,5 |
+| 16,45 a 17,95 s | "Manda para quem fecha o caixa." (16,5) | CTA sobreposto: MANDA PRA QUEM FECHA O CAIXA · Link na bio. |
+| 17,95 a 18,3 s | | Loop: volta ao quadro 1 (44h) |
 
 Área segura: nada importante nos 250 px de cima e de baixo nem nos 130 px da direita. Blocos de log marcados `// ilustrativo`.
 
 ## Áudio
 
-O vídeo sai mudo. Sugestão: áudio original do Hélio (voz lendo a conta) ou faixa da biblioteca do Instagram em volume baixo (no agendamento, `audioConfiguration` com `audioVolume` baixo; só funciona em conta business ligada a página do Facebook). Se for usar voz sintética (ElevenLabs) ou gravar a sua, o texto e a direção estão na seção **Locução** abaixo.
+O arquivo final leva a locução da Carla (ElevenLabs), normalizada em -16 LUFS, sem música. Para música, use faixa da biblioteca do Instagram em volume bem baixo (no agendamento, `audioConfiguration` com `audioVolume` baixo; só funciona em conta business ligada a página do Facebook). Antes, a sugestão era: áudio original do Hélio (voz lendo a conta) ou faixa da biblioteca do Instagram em volume baixo (no agendamento, `audioConfiguration` com `audioVolume` baixo; só funciona em conta business ligada a página do Facebook). Se for usar voz sintética (ElevenLabs) ou gravar a sua, o texto e a direção estão na seção **Locução** abaixo.
 
 ## Locução (ElevenLabs)
 
