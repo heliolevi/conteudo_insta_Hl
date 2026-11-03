@@ -27,7 +27,49 @@
 
 ## Áudio
 
-O vídeo sai mudo. Sugestão: áudio original do Hélio (voz lendo a conta) ou faixa da biblioteca do Instagram em volume baixo (no agendamento, `audioConfiguration` com `audioVolume` baixo; só funciona em conta business ligada a página do Facebook). Se for gravar voz: "Conferir Pix na mão custa 44 horas por ano. Dez minutos por dia, vinte e dois dias úteis, doze meses. Mais que uma semana de trabalho. Com o Pix identificado por pedido, sobra só a divergência. Manda pra quem fecha o caixa."
+O vídeo sai mudo. Sugestão: áudio original do Hélio (voz lendo a conta) ou faixa da biblioteca do Instagram em volume baixo (no agendamento, `audioConfiguration` com `audioVolume` baixo; só funciona em conta business ligada a página do Facebook). Se for usar voz sintética (ElevenLabs) ou gravar a sua, o texto e a direção estão na seção **Locução** abaixo.
+
+## Locução (ElevenLabs)
+
+Uma frase por arquivo, nomeados na ordem (01 a 07). Voz do Brasil, masculina, firme e rápida; testar 2 ou 3 vozes com a frase 01. Os tempos são onde cada frase entra no vídeo atual (15 s); se a voz passar do tempo, ajusto o vídeo para durar mais.
+
+**Com tags (v3)**
+
+```
+[confident, fast] Quarenta e quatro horas por ano conferindo Pix.
+[calm] Faça a conta.
+Dez minutos por dia... vinte e dois dias úteis... doze meses.
+[building up] Quarenta e quatro horas.
+[surprised, clear] Mais que uma semana de trabalho.
+[warm, confident] Com o Pix identificado, sobra só a divergência.
+[friendly, inspiring] Manda pra quem fecha o caixa.
+```
+
+**Sem tags (Multilingual v2)**
+
+```
+Quarenta e quatro horas por ano conferindo Pix.
+Faça a conta.
+Dez minutos por dia, vinte e dois dias úteis, doze meses.
+Quarenta e quatro horas.
+Mais que uma semana de trabalho.
+Com o Pix identificado, sobra só a divergência.
+Manda pra quem fecha o caixa.
+```
+
+**Direção**
+
+| # | Entra em | Intenção | Como falar |
+|---|---|---|---|
+| 01 | 0,0 s | gancho | direto, sem "oi", cortando o ar; "quarenta e quatro" com ênfase |
+| 02 | 3,0 s | convite | mais baixo e calmo, curta |
+| 03 | 3,6 s | conta | ritmo de contagem, uma pausa curta depois de cada item |
+| 04 | 6,5 s | resultado | desacelera, peso no número |
+| 05 | 7,9 s | virada | surpresa contida, "semana" levemente mais forte |
+| 06 | 10,9 s | solução | mais leve e aliviada, firme em "divergência" |
+| 07 | 13,3 s | pedido | caloroso, acabando com sorriso, sem alongar a última sílaba |
+
+Pronúncia: "Pix" lido "píks". Números por extenso (já estão assim). Volume da música, se houver, 18 a 22 dB abaixo da voz.
 
 ## Legenda
 
