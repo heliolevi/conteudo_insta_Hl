@@ -1,0 +1,181 @@
+<!doctype html><html lang="pt-BR"><head><meta charset="utf-8"><title>reel pix pago aguardando</title><style>
+@font-face{font-family:"Lexend Exa";src:url("../_gerador/fonts/LexendExa.ttf");font-weight:100 900}
+@font-face{font-family:"Manrope";src:url("../_gerador/fonts/Manrope.ttf");font-weight:200 800}
+@font-face{font-family:"JetBrains Mono";src:url("../_gerador/fonts/JetBrainsMono.ttf");font-weight:100 800}
+:root{--bg:#050b1c;--abyss:#030714;--deep:#0a1e43;--cobalt:#1963a6;--azure:#1aa0c5;--cyan:#22c3e6;
+--foam:#dbeaf3;--ink:#e8f1f8;--muted:#8fa8c4;--line:#17315c;--surface:#08142e}
+*{box-sizing:border-box;margin:0;padding:0}
+html,body{background:#000}
+.slide{position:relative;width:1080px;overflow:hidden;background:var(--bg);color:var(--ink);font-family:"Manrope",sans-serif}
+.slide.feed{height:1350px}.slide.story{height:1920px}
+.cy{color:var(--cyan)}.c{color:#6f89aa}.k{color:var(--cyan)}
+.mono{font-family:"JetBrains Mono",monospace;font-weight:500;letter-spacing:.08em;text-transform:uppercase;color:var(--muted)}
+
+.mare{position:absolute;inset:-40px;background:
+ radial-gradient(900px 760px at 8% 98%,rgba(25,99,166,.95) 0%,rgba(25,99,166,0) 62%),
+ radial-gradient(760px 640px at 100% 6%,rgba(10,30,67,1) 0%,rgba(10,30,67,0) 68%),
+ radial-gradient(560px 460px at 62% 58%,rgba(26,160,197,.30) 0%,rgba(26,160,197,0) 72%),
+ radial-gradient(700px 520px at 20% 30%,rgba(10,30,67,.9) 0%,rgba(10,30,67,0) 70%),#050b1c}
+.slide.story .mare{background:
+ radial-gradient(1100px 900px at 0% 100%,rgba(25,99,166,.95) 0%,rgba(25,99,166,0) 62%),
+ radial-gradient(900px 760px at 100% 0%,rgba(10,30,67,1) 0%,rgba(10,30,67,0) 68%),
+ radial-gradient(700px 560px at 70% 52%,rgba(26,160,197,.26) 0%,rgba(26,160,197,0) 72%),#050b1c}
+.grain{position:absolute;inset:0;opacity:.11;mix-blend-mode:overlay;pointer-events:none;
+ background-image:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='260' height='260'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='2' stitchTiles='stitch'/><feColorMatrix values='0 0 0 0 1  0 0 0 0 1  0 0 0 0 1  0 0 0 .9 0'/></filter><rect width='100%' height='100%' filter='url(%23n)'/></svg>")}
+.onda{position:absolute;left:0;right:0;bottom:0;height:210px;pointer-events:none;
+ -webkit-mask-image:linear-gradient(to top,#000 0%,#000 35%,transparent 100%)}
+.onda .dots{position:absolute;inset:0;background:radial-gradient(circle,rgba(143,168,196,.42) 1.3px,transparent 1.8px) 0 0/28px 28px}
+.onda svg{position:absolute;inset:0;width:100%;height:100%}
+
+.top{position:absolute;left:80px;right:80px;top:62px;display:flex;align-items:center;justify-content:space-between;z-index:4}
+.slide.story .top{top:170px}
+.top .l{display:flex;align-items:center;gap:16px;font-family:"JetBrains Mono",monospace;font-weight:500;font-size:26px;letter-spacing:.04em;color:var(--foam)}
+.top .r{font-family:"JetBrains Mono",monospace;font-weight:500;font-size:26px;letter-spacing:.08em;color:var(--muted)}
+.node{width:14px;height:14px;border-radius:50%;background:var(--cyan);box-shadow:0 0 16px rgba(34,195,230,.85)}
+
+.col{position:absolute;left:80px;right:80px;top:150px;bottom:150px;display:flex;flex-direction:column;z-index:3}
+.slide.story .col{top:300px;bottom:330px}
+.num{font-family:"Lexend Exa",sans-serif;font-weight:500;font-size:124px;line-height:1;color:var(--cobalt);margin-bottom:22px}
+.h{font-family:"Lexend Exa",sans-serif;font-weight:500;letter-spacing:-.012em;color:var(--foam);font-size:72px;line-height:1.1;margin-bottom:36px}
+.h.xl{font-size:90px;line-height:1.07}
+.slide.story .h{font-size:100px;line-height:1.06}
+.p{font-size:41px;line-height:1.38;font-weight:500;color:var(--foam);opacity:.94;margin-bottom:42px}
+.p.s{font-size:34px;color:var(--muted);opacity:1}
+.src{font-family:"JetBrains Mono",monospace;font-weight:500;font-size:24px;letter-spacing:.06em;text-transform:uppercase;color:#7f98b6;line-height:1.55;margin-top:auto}
+.spacer{flex:1}
+
+.panel{border:1px solid var(--line);border-radius:14px;background:var(--surface);padding:26px 32px}
+.panel .tag{display:flex;justify-content:space-between;margin-bottom:16px;font-size:25px}
+.panel .tag .i{color:#7f98b6;text-transform:none;letter-spacing:.02em}
+.code{font-family:"JetBrains Mono",monospace;font-weight:500;font-size:32px;line-height:1.5;color:var(--foam);white-space:pre}
+
+.bignum{font-family:"Lexend Exa",sans-serif;font-weight:500;font-size:470px;line-height:.9;color:var(--foam);letter-spacing:-.045em}
+.biglab{font-size:30px;margin-top:10px}
+.hint{display:flex;align-items:center;gap:14px;font-size:27px;color:var(--ink)}
+.hint .a{color:var(--cyan)}
+
+.tl{display:flex;flex-direction:column;gap:46px;margin:14px 0 52px}
+.tl .row{display:flex;gap:34px;align-items:baseline}
+.tl .d{font-family:"JetBrains Mono",monospace;font-weight:600;font-size:34px;letter-spacing:.04em;color:var(--cyan);width:268px;flex:none}
+.tl .t{font-size:42px;font-weight:600;line-height:1.28;color:var(--ink)}
+.tl .t small{display:block;font-size:27px;font-weight:500;color:var(--muted);margin-top:4px}
+
+.chk{display:flex;flex-direction:column;gap:4px;margin-bottom:26px}
+.chk .row{display:flex;align-items:center;gap:28px;height:90px}
+.chk svg{flex:none;width:50px;height:50px}
+.chk span{font-size:40px;font-weight:700;line-height:1.25;color:var(--ink)}
+.cta{display:inline-flex;align-self:flex-start;height:96px;padding:0 44px;align-items:center;gap:18px;border-radius:8px;background:var(--cyan);color:var(--abyss);font-family:"JetBrains Mono",monospace;font-weight:700;font-size:30px;letter-spacing:.08em;text-transform:uppercase}
+.note{font-size:28px;font-weight:500;line-height:1.4;color:var(--muted);margin-top:26px}
+.lock{margin-top:auto}
+.lock .n{font-family:"Lexend Exa",sans-serif;font-weight:500;font-size:32px;color:var(--foam);text-transform:lowercase}
+.lock .t{margin-top:8px;color:var(--cyan);font-size:22px}
+.two{display:flex;flex-direction:column;gap:26px;margin-bottom:38px}
+.two .panel{padding:30px 34px}
+.two .tt{font-family:"Lexend Exa",sans-serif;font-weight:500;font-size:46px;color:var(--foam);margin-bottom:10px}
+.two .dd{font-size:36px;line-height:1.36;color:var(--muted);font-weight:500}
+.flow{display:flex;flex-direction:column;gap:0;margin-bottom:34px}
+.flow .st{display:flex;align-items:center;gap:26px;height:96px}
+.flow .st .dot{width:20px;height:20px;border-radius:50%;border:2px solid var(--azure);flex:none;position:relative}
+.flow .st .dot.on{background:var(--cyan);border-color:var(--cyan);box-shadow:0 0 14px rgba(34,195,230,.7)}
+.flow .st .nm{font-family:"JetBrains Mono",monospace;font-weight:600;font-size:36px;color:var(--foam)}
+.flow .st .q{font-size:29px;color:var(--muted);font-weight:500;margin-left:auto}
+.stk{flex:1;display:flex;align-items:flex-end;justify-content:center;padding-bottom:6px}
+
+html,body{width:1080px;height:1920px;overflow:hidden}
+.slide.story{width:1080px;height:1920px}
+.wrap{position:absolute;left:70px;width:880px;z-index:3}
+.brand{position:absolute;left:70px;top:270px;z-index:5;display:flex;align-items:center;gap:16px;
+ font-family:"JetBrains Mono",monospace;font-weight:500;font-size:28px;letter-spacing:.04em;color:var(--foam)}
+.sc{position:absolute;inset:0;opacity:0}
+.lab{font-family:"JetBrains Mono",monospace;font-weight:600;font-size:34px;letter-spacing:.08em;text-transform:uppercase;color:var(--muted)}
+.big{font-family:"Lexend Exa",sans-serif;font-weight:500;color:var(--foam);letter-spacing:-.045em;line-height:.9}
+.t1{font-family:"Lexend Exa",sans-serif;font-weight:500;color:var(--foam);line-height:1.12;letter-spacing:-.012em}
+.ln{min-height:60px;font-family:"JetBrains Mono",monospace;font-weight:500;font-size:38px;line-height:1.55;color:var(--foam);white-space:pre}
+.panel.r{padding:30px 34px}
+.cur{display:inline-block;width:.6em;height:1em;background:var(--cyan);vertical-align:-.12em;margin-left:2px}
+.pill{position:absolute;left:70px;top:1440px;z-index:6;opacity:0}
+.step{font-family:"JetBrains Mono",monospace;font-weight:600;font-size:40px;letter-spacing:.08em;color:var(--cobalt);margin-bottom:22px}
+</style></head><body>
+<div class="slide story" id="root">
+ <div class="mare"></div><div class="grain"></div>
+ <div class="brand"><span class="node"></span><span>hl.build</span></div>
+
+ <!-- A: gancho (0 a 2,9 s) e loop (15,7 a 16 s) -->
+ <div class="sc" id="A"><div class="wrap" style="top:470px">
+   <div class="lab">Pix pago. Pedido parado.</div>
+   <div class="big" style="font-size:400px;margin-top:40px">3</div>
+   <div class="t1" style="font-size:66px;margin-top:30px">motivos para um Pix pago continuar <span class="cy">aguardando</span>.</div>
+   <div class="panel r" style="margin-top:56px"><div class="tag mono" style="display:flex;justify-content:space-between;margin-bottom:18px;font-size:26px"><span>Pedido 2087</span><span class="i" style="text-transform:none;color:#7f98b6">// ilustrativo</span></div><div class="ln" data-s="0.0" data-raw="pix.recebido ........ ok"></div><div class="ln" data-s="0.2" data-raw="pedido.status ....... ^aguardando^"></div></div>
+ </div></div>
+
+ <!-- B: 01 -->
+ <div class="sc" id="B"><div class="wrap" style="top:640px">
+   <div class="step">01</div>
+   <h2 class="t1" style="font-size:84px">O aviso não <span class="cy">chegou</span>.</h2>
+   <div class="panel r" style="margin-top:56px"><div class="tag mono" style="display:flex;justify-content:space-between;margin-bottom:18px;font-size:26px"><span>Webhook do Pix</span><span class="i" style="text-transform:none;color:#7f98b6">// ilustrativo</span></div><div class="ln" data-s="3.3" data-raw="POST /webhook/pix"></div><div class="ln" data-s="3.9" data-raw="resposta ....... ^504 timeout^"></div><div class="ln" data-s="4.7" data-raw="pedido ........... aguardando"></div></div>
+ </div></div>
+
+ <!-- C: 02 -->
+ <div class="sc" id="C"><div class="wrap" style="top:640px">
+   <div class="step">02</div>
+   <h2 class="t1" style="font-size:84px">O aviso veio sem <span class="cy">pedido</span>.</h2>
+   <div class="panel r" style="margin-top:56px"><div class="tag mono" style="display:flex;justify-content:space-between;margin-bottom:18px;font-size:26px"><span>pix.recebido</span><span class="i" style="text-transform:none;color:#7f98b6">// ilustrativo</span></div><div class="ln" data-s="6.5" data-raw="valor ........... R$ 240,00"></div><div class="ln" data-s="7.1" data-raw="txid ............. ^vazio^"></div><div class="ln" data-s="7.9" data-raw="pedido ........... não achado"></div></div>
+ </div></div>
+
+ <!-- D: 03 -->
+ <div class="sc" id="D"><div class="wrap" style="top:640px">
+   <div class="step">03</div>
+   <h2 class="t1" style="font-size:84px">Deu erro e <span class="cy">ninguém</span> viu.</h2>
+   <div class="panel r" style="margin-top:56px"><div class="tag mono" style="display:flex;justify-content:space-between;margin-bottom:18px;font-size:26px"><span>Fila de eventos</span><span class="i" style="text-transform:none;color:#7f98b6">// ilustrativo</span></div><div class="ln" data-s="9.8" data-raw="erro ............. gravado"></div><div class="ln" data-s="10.4" data-raw="alerta ........... ^nenhum^"></div><div class="ln" data-s="11.1" data-raw="reprocesso ....... ^nenhum^"></div></div>
+ </div></div>
+
+ <!-- E: solução -->
+ <div class="sc" id="E"><div class="wrap" style="top:560px">
+   <h2 class="t1" style="font-size:72px">Registrar, tentar de novo e <span class="cy">conciliar</span> pelo txid.</h2>
+   <div class="panel r" style="margin-top:56px"><div class="tag mono" style="display:flex;justify-content:space-between;margin-bottom:18px;font-size:26px"><span>Evento do Pix</span><span class="i" style="text-transform:none;color:#7f98b6">// ilustrativo</span></div><div class="ln" data-s="12.9" data-raw="evento ........... registrado"></div><div class="ln" data-s="13.3" data-raw="tentativa 1 ...... falhou"></div><div class="ln" data-s="13.7" data-raw="tentativa 2 ...... ok"></div><div class="ln" data-s="14.1" data-raw="pedido ........... ^pago^"></div></div>
+ </div></div>
+
+ <div class="pill" id="pill">
+   <div class="cta" style="height:104px;font-size:30px"><span>Manda pra quem cuida da loja</span></div>
+   <div style="margin-top:26px;font-size:36px;font-weight:700;color:var(--foam)">Link na bio.</div>
+ </div>
+</div>
+<script>
+const cl=(x,a=0,b=1)=>Math.min(b,Math.max(a,x));
+const ease=x=>1-Math.pow(1-x,3);
+const P=(t,s,d)=>ease(cl((t-s)/d));
+const $=id=>document.getElementById(id);
+function win(el,t,s,e,fi=.28,fo=.28,rise=26){
+  const i=cl((t-s)/fi), o=cl((e-t)/fo);
+  el.style.opacity=(i*o).toFixed(3);
+  el.style.transform=`translateY(${((1-ease(i))*rise).toFixed(1)}px)`;
+}
+function typed(raw,n){
+  let out='',hi=false,c=0;
+  for(const ch of raw){
+    if(ch==='^'){hi=!hi;out+=hi?'<span class="k">':'</span>';continue}
+    if(c>=n)break; out+=(ch==='<'?'&lt;':ch); c++;
+  }
+  if(hi)out+='</span>'; return out;
+}
+const lines=[...document.querySelectorAll('.ln')];
+function seek(t){
+  // A: gancho (0 a 2,9 s) e retorno do loop (15,7 a 16 s)
+  const a1=cl((2.9-t)/.3), a2=cl((t-15.7)/.3);
+  $('A').style.opacity=(t<3.1?a1:a2).toFixed(3);
+  $('A').style.transform=`scale(${(1.05-0.05*cl(t/2.6)).toFixed(4)})`;
+  win($('B'),t,2.85,6.4,.3,.3);
+  win($('C'),t,6.05,9.9,.3,.3);
+  win($('D'),t,9.5,12.9,.3,.3);
+  win($('E'),t,12.55,15.75,.3,.3);
+  for(const el of lines){
+    const s=parseFloat(el.dataset.s), k=Math.floor(Math.max(0,t-s)*44);
+    const raw=el.dataset.raw, full=raw.replace(/\^/g,'').length;
+    const active=t>=s && k<full;
+    el.innerHTML=typed(raw,k)+(active?'<span class="cur"></span>':'');
+  }
+  const p=$('pill'); const pi=P(t,14.4,.35), po=cl((15.7-t)/.3);
+  p.style.opacity=(pi*po).toFixed(3); p.style.transform=`translateY(${((1-pi)*30).toFixed(1)}px)`;
+}
+document.fonts.ready.then(()=>seek(0));
+</script></body></html>
