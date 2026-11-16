@@ -1,0 +1,67 @@
+{
+  "semente": 2711,
+  "pedidos": 500,
+  "premissas": {
+    "perdido": 0.02,
+    "sem_txid": 0.03,
+    "duplicado": 0.03,
+    "janela_min": 30
+  },
+  "contagem": {
+    "avisos": 500,
+    "baixa_txid": 468,
+    "duplicado_ignorado": 12,
+    "casado_valor_hora": 17,
+    "fila_ambiguo": 3,
+    "fila_sem_candidato": 0,
+    "varredura": 12
+  },
+  "automaticos": 497,
+  "fila_na_mao": 3,
+  "pedidos_sem_baixa_no_fim": 3,
+  "pct_na_mao": 0.6,
+  "amostras": {
+    "casado": {
+      "valor": 299.9,
+      "hora": "00:11:34",
+      "pedido": 1286
+    },
+    "duplicado": {
+      "txid": "T1011",
+      "valor": 129.9,
+      "hora": "00:51:45",
+      "pedido": 1011
+    },
+    "ambiguo": {
+      "valor": 299.9,
+      "hora": "12:11:52",
+      "candidatos": 2
+    },
+    "varredura": {
+      "txid": "T1058",
+      "valor": 249.9,
+      "hora": "21:56:33",
+      "pedido": 1058
+    }
+  },
+  "fila": [
+    {
+      "motivo": "ambiguo",
+      "valor": 299.9,
+      "hora": "12:11:52",
+      "candidatos": 2
+    },
+    {
+      "motivo": "ambiguo",
+      "valor": 79.9,
+      "hora": "12:40:29",
+      "candidatos": 2
+    },
+    {
+      "motivo": "ambiguo",
+      "valor": 249.9,
+      "hora": "21:57:58",
+      "candidatos": 2
+    }
+  ]
+}
